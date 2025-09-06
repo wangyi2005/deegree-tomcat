@@ -1,0 +1,20 @@
+1. Create a new workspace Identifier:chglj
+   Working directory:		/root/.deegree
+   copydata： root/.deegree/chglj/datasources/feature/shapefiles
+  
+2.Create new feature store  Identifier:yjbhq type:shapefile template:mapped
+   modify: <FeatureTypeName>一级保护区</FeatureTypeName>
+   modify: <File>./shapefiles/yjbhq.shp</File>
+   modify: <Encoding>UTF-8</Encoding>
+   modify: <SimpleProperty name="objectid" mapping="ID" /> ID-->objectid
+
+3.Create new service Identifier:yjbhq type:WFS  template:complex
+   delete: <Version>1.1.0</Version>
+   modify:<FeatureStoreId>jiezhuang</FeatureStoreId>
+   delete: <QueryCRS>urn:ogc:def:crs:EPSG::4258</QueryCRS>
+   add: <GeoJSONFormat>
+          <MimeType>application/geo+json</MimeType>
+        </GeoJSONFormat>
+4.publish WFS to arcgisonline 
+deegree：copy link from Web services Capabilities	
+arcgisonline: add layer from URL
