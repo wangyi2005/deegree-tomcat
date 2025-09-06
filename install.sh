@@ -37,12 +37,12 @@ rm -rf docs examples manager host-manager ROOT
 wget https://repo.deegree.org/content/repositories/public/org/deegree/deegree-webservices/3.6.0/deegree-webservices-3.6.0.war
 mv deegree-webservices-3.6.0.war deegree.war
 
-#--------create tomcat.service
-nano /etc/systemd/system/tomcat.service
+#--------create deegree.service
+nano /etc/systemd/system/deegree.service
 #-------
 
 #--------modify tomcat9 server.xml  maxThreads="20" acceptCount="20" --------
-nano /usr/share/tomcat9/apache-tomcat-9.0.108/conf/server.xml
+nano /usr/share/tomcat10/apache-tomcat-10.1.44/conf/server.xml
 <!--
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
@@ -52,7 +52,7 @@ nano /usr/share/tomcat9/apache-tomcat-9.0.108/conf/server.xml
     -->
  <Connector port="443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="20" acceptCount="20" SSLEnabled="true"
-               maxParameterCount="1000"
+               maxParameterCount="1000" compression="on"
                >
         <SSLHostConfig>
             <Certificate certificateKeyFile="/etc/letsencrypt/live/ocv.wangyi2020.tk/privkey.pem"
