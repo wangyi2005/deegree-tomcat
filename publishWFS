@@ -13,7 +13,7 @@ deegree console https://ocv.wangyi2020.tk/deegree/
 
 3.Create new service Identifier:yjbhq type:WFS  template:complex
    delete: <Version>1.1.0</Version>
-   modify:<FeatureStoreId>jiezhuang</FeatureStoreId>
+   modify:<FeatureStoreId>yjbhq</FeatureStoreId>
    delete: <QueryCRS>urn:ogc:def:crs:EPSG::4258</QueryCRS>
    add: <GeoJSONFormat>
           <MimeType>application/geo+json</MimeType>
