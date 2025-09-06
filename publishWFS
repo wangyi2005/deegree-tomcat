@@ -9,7 +9,7 @@ deegree console https://ocv.wangyi2020.tk/deegree/
    modify: <FeatureTypeName>一级保护区</FeatureTypeName>
    modify: <File>./shapefiles/yjbhq.shp</File>
    modify: <Encoding>UTF-8</Encoding>
-   modify: <SimpleProperty name="objectid" mapping="ID" /> ID-->objectid
+   modify: <SimpleProperty name="objectid" mapping="ID" /> ID-->objectid 此列值必须为唯一，否则只显示第1个要素
 
 3.Create new service Identifier:yjbhq type:WFS  template:complex
    delete: <Version>1.1.0</Version>
