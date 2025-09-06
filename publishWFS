@@ -1,6 +1,9 @@
+
+deegree console https://ocv.wangyi2020.tk/deegree/
+
 1. Create a new workspace Identifier:chglj
    Working directory:		/root/.deegree
-   copydata： root/.deegree/chglj/datasources/feature/shapefiles
+   copydata to： root/.deegree/chglj/datasources/feature/shapefiles
   
 2.Create new feature store  Identifier:yjbhq type:shapefile template:mapped
    modify: <FeatureTypeName>一级保护区</FeatureTypeName>
@@ -19,5 +22,5 @@
 deegree：copy link from Web services Capabilities	
 arcgisonline: add layer from URL
 
-5. backgroud layer 
+5. arcgisonline backgroud layer 
   https://geo.wangyi2020.tk/vt/lyrs=s&x={col}&y={row}&z={level}
