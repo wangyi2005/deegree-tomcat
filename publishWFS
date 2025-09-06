@@ -18,3 +18,6 @@
 4.publish WFS to arcgisonline 
 deegree：copy link from Web services Capabilities	
 arcgisonline: add layer from URL
+
+5. backgroud layer 
+  https://geo.wangyi2020.tk/vt/lyrs=s&x={col}&y={row}&z={level}
