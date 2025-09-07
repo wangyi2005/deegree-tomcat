@@ -21,10 +21,9 @@ java -version
 apt install openjdk-17-jre-headless
 
 #-----------install tomcat10------------
-#apt install tomcat9 --error
 wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.zip
 mkdir /usr/share/tomcat10
-mv apache-tomcat-10.1.44.zip /usr/share/tomcat9
+mv apache-tomcat-10.1.44.zip /usr/share/tomcat10
 cd /usr/share/tomcat10
 unzip apache-tomcat-10.1.44.zip
 cd apache-tomcat-10.1.44/bin
@@ -41,7 +40,7 @@ mv deegree-webservices-3.6.0.war deegree.war
 nano /etc/systemd/system/deegree.service
 #-------
 
-#--------modify tomcat9 server.xml  maxThreads="20" acceptCount="20" --------
+#--------modify tomcat9 server.xml  maxThreads="20" acceptCount="20"  compression="on"--------
 nano /usr/share/tomcat10/apache-tomcat-10.1.44/conf/server.xml
 <!--
     <Connector port="8080" protocol="HTTP/1.1"
