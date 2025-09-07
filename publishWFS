@@ -18,9 +18,13 @@ deegree console https://ocv.wangyi2020.tk/deegree/
    add: <GeoJSONFormat>
           <MimeType>application/geo+json</MimeType>
         </GeoJSONFormat>
-4.publish WFS to arcgisonline 
+
+4. backup chglj workspace files---cd /root/.deegree &zip -r deegree . 
+
+5. publish WFS to arcgisonline 
 deegree：copy link from Web services Capabilities	
 arcgisonline: add layer from URL
 
-5. arcgisonline backgroud layer 
-  https://geo.wangyi2020.tk/vt/lyrs=s&x={col}&y={row}&z={level}
+6. arcgisonline backgroud layer 
+  https://geo.wangyi2020.tk/vt/lyrs=s&x={col}&y={row}&z={level}  ---nginx
+
