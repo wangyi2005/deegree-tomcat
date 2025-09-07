@@ -5,9 +5,9 @@ After=network.target
 [Service]
 Type=forking
 Environment = "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
-#Environment = "DEEGREE_WORKSPACE_ROOT=/usr/share/tomcat9/apache-tomcat-9.0.108/.deegree"  
-ExecStart = /bin/bash /usr/share/tomcat9/apache-tomcat-9.0.108/bin/startup.sh
-ExecStop  = /bin/bash /usr/share/tomcat9/apache-tomcat-9.0.108/bin/shutdown.sh
+#Environment = "DEEGREE_WORKSPACE_ROOT=/usr/share/tomcat10/apache-tomcat-10.1.44/.deegree"  
+ExecStart = /bin/bash /usr/share/tomcat10/apache-tomcat-10.1.44/bin/startup.sh
+ExecStop  = /bin/bash /usr/share/tomcat10/apache-tomcat-10.1.44/bin/shutdown.sh
 Restart=always
 RestartSec=5
 
