@@ -42,13 +42,14 @@ nano /etc/systemd/system/deegree.service
 
 #--------modify tomcat9 server.xml  maxThreads="20" acceptCount="20"  compression="on"--------
 nano /usr/share/tomcat10/apache-tomcat-10.1.44/conf/server.xml
-<!--
+# nginx ssl 
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443"
+               maxThreads="20" acceptCount="20" compression="on"
+               proxyName="geo.wangyi2020.tk" proxyPort="443" scheme="https" secure="true"
                maxParameterCount="1000"
                />
-    -->
+# tomcat ssl               
  <Connector port="443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="20" acceptCount="20" SSLEnabled="true"
                maxParameterCount="1000" compression="on"
@@ -61,3 +62,25 @@ nano /usr/share/tomcat10/apache-tomcat-10.1.44/conf/server.xml
         </SSLHostConfig>
     </Connector>
     
+#-------------------- modify tomcat9 web.xml add Corsfilter---------------   
+    <filter>
+      <filter-name>CorsFilter</filter-name>
+      <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+      <init-param>
+        <param-name>cors.allowed.origins</param-name>
+        <param-value>*</param-value>
+      </init-param>
+      <init-param>
+        <param-name>cors.allowed.methods</param-name>
+        <param-value>GET, POST, PUT, DELETE, OPTIONS</param-value>
+      </init-param>
+      <init-param>
+        <param-name>cors.allowed.headers</param-name>
+        <param-value>Content-Type, Authorization</param-value>
+      </init-param>
+    </filter>
+    <filter-mapping>
+      <filter-name>CorsFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
