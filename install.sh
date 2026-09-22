@@ -11,10 +11,10 @@ nano /etc/fstab
 
 #-----------setup cert--------------
 apt install certbot
-certbot certonly --standalone --key-type rsa --agree-tos --email tanghb2005@gmail.com -d ocv.wangyi2020.tk
-#/etc/letsencrypt/live/ocv.wangyi2020.tk/fullchain.pem
-#/etc/letsencrypt/live/ocv.wangyi2020.tk/privkey.pem
-certbot renew --key-type rsa --cert-name ocv.wangyi2020.tk --force-renewal
+certbot certonly --standalone --key-type rsa --agree-tos --email tanghb2005@gmail.com -d geo.653080.xyz
+#/etc/letsencrypt/live/geo.653080.xyz/fullchain.pem
+#/etc/letsencrypt/live/geo.653080.xyz/privkey.pem
+certbot renew --key-type rsa --cert-name geo.653080.xyz --force-renewal
 
 #-----------install java17-------------
 java -version
@@ -46,7 +46,7 @@ nano /usr/share/tomcat10/apache-tomcat-10.1.44/conf/server.xml
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                maxThreads="20" acceptCount="20" compression="on"
-               proxyName="geo.wangyi2020.tk" proxyPort="443" scheme="https" secure="true"
+               proxyName="geo.653080.xyz" proxyPort="443" scheme="https" secure="true"
                maxParameterCount="1000"
                />
 # tomcat ssl               
