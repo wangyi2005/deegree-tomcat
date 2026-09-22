@@ -1,5 +1,5 @@
 
-deegree console https://ocv.wangyi2020.tk/deegree/
+deegree console https://geo.653080.xyz/deegree/
 
 1. Create a new workspace Identifier:chglj
    Working directory:		/root/.deegree
@@ -25,8 +25,8 @@ deegree console https://ocv.wangyi2020.tk/deegree/
 deegree：copy link from Web services Capabilities	
 arcgisonline: add layer from URL
 
-6. arcgisonline backgroud layer 
-  https://geo.653080.xyz/vt/lyrs=s&x={col}&y={row}&z={level}  ---nginx
+6. arcgisonline  layer 
+https://geo.653080.xyz/vt/lyrs=s&x={col}&y={row}&z={level}  ---nginx
 https://geo.653080.xyz/deegree/services/basin?service=WFS&request=GetCapabilities
 https://geo.653080.xyz/deegree/services/ejsx?service=WFS&request=GetCapabilities
 https://geo.653080.xyz/deegree/services/fjmshq?service=WFS&request=GetCapabilities
