@@ -11,10 +11,10 @@ nano /etc/fstab
 
 #-----------setup cert--------------
 apt install certbot
-certbot certonly --standalone --key-type rsa --agree-tos --email tanghb2005@gmail.com -d geo.653080.xyz
+certbot certonly --standalone --key-type ecdsa --agree-tos --email tanghb2005@gmail.com -d geo.653080.xyz
 #/etc/letsencrypt/live/geo.653080.xyz/fullchain.pem
 #/etc/letsencrypt/live/geo.653080.xyz/privkey.pem
-certbot renew --key-type rsa --cert-name geo.653080.xyz --force-renewal
+certbot renew --key-type ecdsa --cert-name geo.653080.xyz --force-renewal
 
 #-----------install java17-------------
 java -version
